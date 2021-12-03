@@ -1,11 +1,12 @@
 import pytest
-from werkzeug.wrappers import response
+# from werkzeug.wrappers import response
 from app import app
 
 
 @pytest.fixture
 def client():
     return app.test_client()
+
 
 def test_home_page(client):
     response = client.get("/")
